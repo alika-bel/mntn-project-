@@ -1,0 +1,132 @@
+:root {
+  /* Кольори */
+
+  --primary-text-color: #ffffff;
+  --background-color: #0b1d26;
+  --accent-color: #fbd784;
+
+  /* Шрифти */
+  --font-primary: "Chivo", sans-serif;
+  --font-secondary: "Chonburi", serif;
+  --font-titles: "Cinzel", serif;
+}
+body {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.header {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: var(--background-color);
+}
+.header-container {
+  display: flex;
+  gap: 631px;
+  align-items: center;
+}
+.logo {
+  font-family: var(--font-secondary);
+  font-size: 32px;
+  font-variant: small-caps;
+}
+.nav {
+  flex-grow: 1;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 37px;
+}
+
+.header-button {
+  color: var(--primary-text-color);
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 17px;
+}
+.header-button::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/vectors/cart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.header-button:hover {
+  cursor: pointer;
+}
+.hero-container {
+    margin-top: 134px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 950px;
+  gap: 32px;
+}
+.hero-group {
+  text-align: left;
+}
+.hero-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  display: flex;
+  gap: 32px;
+}
+.hero-subtitle::before {
+  content: "";
+  height: 5px;
+  width: 72px;
+  background-color: var(--accent-color);
+}
+.hero-title {
+  font-family: var(--font-titles);
+  font-size: 88px;
+  line-height: 114%;
+  text-transform: capitalize;
+}
+.hero-button {
+  display: inline-block;
+  gap: 8px;
+  color: var(--primary-text-color);
+  align-items: center;
+}
+.hero-button::after {
+  content: "";
+  background-image: url(../img/vectors/arrow_downward_24px.svg);
+  width: 16px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
+
+}
+.main {
+  background-color: var(--background-color);
+}
+.subtitle {
+  color: var(--accent-color);
+}
+.footer {
+  background-color: var(--background-color);
+}
