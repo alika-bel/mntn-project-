@@ -23,6 +23,13 @@ img {
   width: 100%;
   height: auto;
 }
+.subtitle {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  display: flex;
+  gap: 32px;
+}
+
 .container {
   max-width: 1920px;
   margin-left: auto;
@@ -53,7 +60,9 @@ img {
   align-items: center;
   gap: 37px;
 }
-
+.nav-item:hover {
+  color: var(--accent-color);
+}
 .header-button {
   color: var(--primary-text-color);
   display: inline-flex;
@@ -67,15 +76,23 @@ img {
   content: "";
   width: 24px;
   height: 24px;
-  background-image: url(../img/vectors/cart.svg);
+  background-image: url(../img/vectors/cart_white.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
-.header-button:hover {
+.header-button:hover::before {
+  background-image: url(../img/vectors/cart_accent.svg);
+  background-repeat: no-repeat;
+
+  background-size: contain;
+
   cursor: pointer;
 }
+.header-button:hover {
+  color: var(--accent-color);
+}
 .hero-container {
-    margin-top: 134px;
+  margin-top: 134px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -95,6 +112,8 @@ img {
 }
 .hero-subtitle::before {
   content: "";
+  display: flex;
+  align-self: center;
   height: 5px;
   width: 72px;
   background-color: var(--accent-color);
@@ -104,29 +123,62 @@ img {
   font-size: 88px;
   line-height: 114%;
   text-transform: capitalize;
+  margin-top: 32px;
 }
 .hero-button {
-  display: inline-block;
+  display: flex;
   gap: 8px;
   color: var(--primary-text-color);
   align-items: center;
+  margin-top: 32px;
 }
 .hero-button::after {
   content: "";
-  background-image: url(../img/vectors/arrow_downward_24px.svg);
+  background-image: url(../img/vectors/arrow_down_white.svg);
   width: 16px;
   height: 24px;
   background-repeat: no-repeat;
   background-size: contain;
-  
-
+}
+.hero-button:hover::after {
+  background-image: url(../img/vectors/arrow_down_accent.svg);
+}
+.hero-button:hover {
+  color: var(--accent-color);
 }
 .main {
   background-color: var(--background-color);
 }
+.level-container {
+  margin-top: 744px;
+}
 .subtitle {
   color: var(--accent-color);
 }
+.subtitle::before {
+  content: "";
+  display: flex;
+  align-self: center;
+  height: 5px;
+  width: 72px;
+  background-color: var(--accent-color);
+}
+.title{
+  font-family: var(--font-titles);
+  font-size: 64px;
+  margin-top: 27px;
+}
+.text{
+  font-weight: 900;
+  line-height: 178%;
+}
+.level-container{
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+
 .footer {
   background-color: var(--background-color);
 }
